@@ -171,5 +171,7 @@ $ yarn build
     - 打包命令需要区分环境(生产:prod, 开发:dev)
     - vue.config.js 对应的配置 process.env.NODE_ENV
     - element-ui 的 css 版本与 js 版本一定要保持一致
+        - element-ui 2.15.13 的全局变量为 ELEMENT 不是 ElementUI(config.externals 中的配置容易出错),
+          详情可以通过控制台查看(this 全局变量)
     - 生产环境的 index.html 中的 cdn 依赖需要留意
 
