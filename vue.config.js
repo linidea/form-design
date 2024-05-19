@@ -23,7 +23,7 @@ module.exports = {
             // 忽略打包
             config.externals({
                 'vue': 'Vue',
-                'element-ui': 'ElementUI',
+                'element-ui': 'ELEMENT',
             })
         }
         // 开发环境

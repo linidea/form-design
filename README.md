@@ -162,13 +162,14 @@ $ yarn build
 - 使用 yarn 命令运行与打包(npm 有问题)
 - node版本 v16
     - 更新 sass-loader 10.1.1
-- index.html 中的 cdn 依赖需要留意,开发时使用本地依赖，生产环境使用 cdn
 - 安装依赖
     - element-ui
     - @smallwei/avue
 - 本地运行时 ElementUI 报错
     - 通过 process.env.NODE_ENV === 'production' 判断是否为生产环境，如果是则使用cdn引入，否则使用本地引入
-- 打包命令需要区分环境
-    - 生产 prod
-    - 开发 dev
+- 部署生产环境问题
+    - 打包命令需要区分环境(生产:prod, 开发:dev)
+    - vue.config.js 对应的配置 process.env.NODE_ENV
+    - element-ui 的 css 版本与 js 版本一定要保持一致
+    - 生产环境的 index.html 中的 cdn 依赖需要留意
 
