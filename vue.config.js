@@ -17,6 +17,7 @@ module.exports = {
     },
 
     chainWebpack: (config) => {
+        console.log('NODE_ENV: ', process.env.NODE_ENV)
         // 生产环境
         if (process.env.NODE_ENV === 'production') {
             // 忽略打包
