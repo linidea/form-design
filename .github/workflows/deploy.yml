@@ -40,7 +40,7 @@ jobs:
         run: yarn install # or npm install
       - name: Build with FormDesign
         run: |
-          yarn build
+          yarn build:prod
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:

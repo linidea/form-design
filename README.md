@@ -168,5 +168,7 @@ $ yarn build
     - @smallwei/avue
 - 本地运行时 ElementUI 报错
     - 通过 process.env.NODE_ENV === 'production' 判断是否为生产环境，如果是则使用cdn引入，否则使用本地引入
-
+- 打包命令需要区分环境
+    - 生产 prod
+    - 开发 dev
 
