@@ -1,4 +1,4 @@
-import beautifier from '@utils/json-beautifier'
+import beautifier from '@/util/json-beautifier'
 
 export default {
     data() {

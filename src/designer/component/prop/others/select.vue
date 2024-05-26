@@ -212,7 +212,7 @@
 
 <script>
 import Draggable from 'vuedraggable'
-import MonacoEditor from '@utils/monaco-editor'
+import MonacoEditor from '@/util/monaco-editor'
 
 export default {
   name: "config-select",

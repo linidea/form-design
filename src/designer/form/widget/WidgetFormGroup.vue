@@ -90,8 +90,8 @@
   </div>
 </template>
 <script>
-import WidgetFormItem from './WidgetFormItem'
-import WidgetFormTable from './WidgetFormTable'
+import WidgetFormItem from './WidgetFormItem.vue'
+import WidgetFormTable from './WidgetFormTable.vue'
 import draggable from 'vuedraggable'
 
 export default {

@@ -112,21 +112,6 @@
             </template>
           </div>
           <div style="display: flex; align-items: center;">
-            <iframe src="https://ghbtns.com/github-btn.html?user=linidea&repo=form-design&type=star&count=true"
-                    frameborder="0"
-                    scrolling="0"
-                    width="100"
-                    height="20"
-                    title="GitHub"
-                    style="margin-left: 10px;"
-                    v-if="showGithubStar"></iframe>
-            <slot name="toolbar-left"></slot>
-            <el-button v-if="toolbar.includes('avue-doc')"
-                       type="text"
-                       size="medium"
-                       icon="el-icon-document"
-                       @click="handleAvueDoc">Avue文档
-            </el-button>
             <el-button v-if="toolbar.includes('import')"
                        type="text"
                        size="medium"
@@ -155,7 +140,7 @@
             <slot name="toolbar"></slot>
           </div>
         </el-header>
-        <el-main :style="{background: widgetForm.column.length == 0 ? `url(${widgetEmpty}) no-repeat 50%`: ''}">
+        <el-main>
           <widget-form ref="widgetForm"
                        :data="widgetForm"
                        :select.sync="widgetFormSelect"
@@ -304,18 +289,17 @@
 </template>
 
 <script>
-import fields from './fieldsConfig.js'
-import {validatenull, filterDicProps, filterCommonDicProps} from '../utils/index'
-import beautifier from '../utils/json-beautifier'
-import MonacoEditor from '../utils/monaco-editor'
-import widgetEmpty from '@assets/widget-empty.png'
-import history from '../mixins/history'
+import fields from './component/config'
+import {validatenull, filterDicProps, filterCommonDicProps} from '../util/index'
+import beautifier from '../util/json-beautifier'
+import MonacoEditor from '../util/monaco-editor'
+import history from '../mixin/history'
 
 import Draggable from 'vuedraggable'
 
-import WidgetForm from './WidgetForm'
-import FormConfig from './FormConfig'
-import WidgetConfig from './WidgetConfig'
+import WidgetForm from './form/widget/WidgetForm.vue'
+import FormConfig from './form/prop/form/index.vue'
+import WidgetConfig from './form/prop/base/index.vue'
 
 export default {
   name: "FormDesign",
@@ -418,7 +402,6 @@ export default {
   },
   data() {
     return {
-      widgetEmpty,
       fields,
       widgetForm: {
         column: [],
@@ -822,5 +805,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../styles";
+@import "./style";
 </style>

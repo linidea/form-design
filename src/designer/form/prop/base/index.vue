@@ -223,7 +223,7 @@
 </template>
 
 <script>
-import fields from './fieldsConfig.js'
+import fields from '../../../component/config'
 
 const dateArr = [
   'year', 'month', 'week', 'date', 'datetime', 'time', 'daterange', 'timerange', 'datetimerange', 'dates'
@@ -235,7 +235,7 @@ export default {
   computed: {
     getComponent() {
       const prefix = 'config-'
-      const { type, component } = this.data
+      const {type, component} = this.data
       if ((!type || component) && type != 'ueditor') return prefix + 'custom'
       let result = 'input'
 
@@ -251,12 +251,12 @@ export default {
   },
   watch: {
     'data.required'(val) {
-      if (val) this.validator.required = { required: true, message: `${this.data.label}必须填写` }
+      if (val) this.validator.required = {required: true, message: `${this.data.label}必须填写`}
       else this.validator.required = null
       this.generateRule()
     },
     'data.pattern'(val) {
-      if (val) this.validator.pattern = { pattern: new RegExp(val), message: `${this.data.label}格式不匹配` }
+      if (val) this.validator.pattern = {pattern: new RegExp(val), message: `${this.data.label}格式不匹配`}
       else this.validator.pattern = null
       this.generateRule()
     }
@@ -277,7 +277,7 @@ export default {
     handleChangeType(type) {
       if (!type) return
       let config
-      for(let f of this.fields) {
+      for (let f of this.fields) {
         config = f.list.find(l => l.type == type)
         if (config) break
       }

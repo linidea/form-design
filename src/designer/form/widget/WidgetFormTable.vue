@@ -93,7 +93,7 @@
   </div>
 </template>
 <script>
-import WidgetFormItem from './WidgetFormItem'
+import WidgetFormItem from './WidgetFormItem.vue'
 import draggable from 'vuedraggable'
 
 export default {
