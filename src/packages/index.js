@@ -1,7 +1,7 @@
 import Config from './config'
 import FormDesign from './index.vue'
 
-import { getAsVal, avueVersion } from './utils/index.js'
+import { getAsVal, avueVersion } from '../utils/index.js'
 
 export default {
   install(Vue) {

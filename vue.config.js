@@ -33,10 +33,11 @@ module.exports = {
             })
         }
         config.resolve.alias
-            .set('@', resolve('packages'))
-            .set('@components', resolve('packages/components'))
-            .set('@utils', resolve('packages/utils'))
-            .set('@mixins', resolve('packages/mixins'))
+            .set('@', resolve('src'))
+            .set('@assets', resolve('src/assets'))
+            .set('@components', resolve('src/components'))
+            .set('@utils', resolve('src/utils'))
+            .set('@mixins', resolve('src/mixins'))
 
         const output = config.output.store.get('path')
         if (output.includes('lib')) config.plugin('optimize')

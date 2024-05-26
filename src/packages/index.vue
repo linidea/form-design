@@ -8,7 +8,8 @@
             <template v-if="customFields[0].title && customFields[0].list && customFields[0].list.length > 0">
               <template v-for="(field, index) in customFields">
                 <div class="field-title"
-                     :key="'f_' + index">{{field.title}}</div>
+                     :key="'f_' + index">{{ field.title }}
+                </div>
                 <draggable tag="ul"
                            :list="field.list"
                            :group="{ name: 'form', pull: 'clone', put: false }"
@@ -21,7 +22,7 @@
                       <a @click="handleFieldClick(item)">
                         <i class="icon iconfont"
                            :class="item.icon"></i>
-                        <span>{{item.title || item.label}}</span>
+                        <span>{{ item.title || item.label }}</span>
                       </a>
                     </li>
                   </template>
@@ -48,7 +49,7 @@
                       <a style="padding: 0 5px;"
                          @click="handleFieldClick(item)">
                         <i :class="item.icon"></i>
-                        <span style="margin-left: 5px;">{{item.title || item.label}}</span>
+                        <span style="margin-left: 5px;">{{ item.title || item.label }}</span>
                       </a>
                     </li>
                   </el-tooltip>
@@ -58,7 +59,7 @@
                     <a style="padding: 0 5px;"
                        @click="handleFieldClick(item)">
                       <i :class="item.icon"></i>
-                      <span style="margin-left: 5px;">{{item.title || item.label}}</span>
+                      <span style="margin-left: 5px;">{{ item.title || item.label }}</span>
                     </a>
                   </li>
                 </template>
@@ -68,7 +69,7 @@
           <div v-for="(field, index) in fields"
                :key="index">
             <template v-if="field.list.find(f => includeFields.includes(f.type))">
-              <div class="field-title">{{field.title}}</div>
+              <div class="field-title">{{ field.title }}</div>
               <draggable tag="ul"
                          :list="field.list"
                          :group="{ name: 'form', pull: 'clone', put: false }"
@@ -81,7 +82,7 @@
                     <a @click="handleFieldClick(item)">
                       <i class="icon iconfont"
                          :class="item.icon"></i>
-                      <span>{{item.title || item.label}}</span>
+                      <span>{{ item.title || item.label }}</span>
                     </a>
                   </li>
                 </template>
@@ -100,12 +101,14 @@
                          size="medium"
                          icon="el-icon-refresh-left"
                          :disabled="historySteps.index == 0"
-                         @click="widgetForm = handleUndo()">撤销</el-button>
+                         @click="widgetForm = handleUndo()">撤销
+              </el-button>
               <el-button type="text"
                          size="medium"
                          icon="el-icon-refresh-right"
                          :disabled="historySteps.index == historySteps.steps.length - 1"
-                         @click="widgetForm = handleRedo()">重做</el-button>
+                         @click="widgetForm = handleRedo()">重做
+              </el-button>
             </template>
           </div>
           <div style="display: flex; align-items: center;">
@@ -122,28 +125,33 @@
                        type="text"
                        size="medium"
                        icon="el-icon-document"
-                       @click="handleAvueDoc">Avue文档</el-button>
+                       @click="handleAvueDoc">Avue文档
+            </el-button>
             <el-button v-if="toolbar.includes('import')"
                        type="text"
                        size="medium"
                        icon="el-icon-upload2"
-                       @click="importJsonVisible = true">导入JSON</el-button>
+                       @click="importJsonVisible = true">导入JSON
+            </el-button>
             <el-button v-if="toolbar.includes('generate')"
                        type="text"
                        size="medium"
                        icon="el-icon-download"
-                       @click="handleGenerateJson">生成JSON</el-button>
+                       @click="handleGenerateJson">生成JSON
+            </el-button>
             <el-button v-if="toolbar.includes('preview')"
                        type="text"
                        size="medium"
                        icon="el-icon-view"
-                       @click="handlePreview">预览</el-button>
+                       @click="handlePreview">预览
+            </el-button>
             <el-button v-if="toolbar.includes('clear')"
                        class="danger"
                        type="text"
                        size="medium"
                        icon="el-icon-delete"
-                       @click="handleClear">清空</el-button>
+                       @click="handleClear">清空
+            </el-button>
             <slot name="toolbar"></slot>
           </div>
         </el-header>
@@ -186,10 +194,12 @@
         <div class="afd-drawer-foot">
           <el-button size="medium"
                      type="primary"
-                     @click="handleImportJsonSubmit">确定</el-button>
+                     @click="handleImportJsonSubmit">确定
+          </el-button>
           <el-button size="medium"
                      type="danger"
-                     @click="importJsonVisible = false">取消</el-button>
+                     @click="importJsonVisible = false">取消
+          </el-button>
         </div>
       </el-drawer>
       <!-- 生成JSON -->
@@ -205,7 +215,8 @@
         <div class="afd-drawer-foot">
           <el-button size="medium"
                      type="primary"
-                     @click="handleGenerate">生成</el-button>
+                     @click="handleGenerate">生成
+          </el-button>
 
           <el-popover placement="top"
                       trigger="hover"
@@ -222,14 +233,16 @@
                             style="margin-right: 15px;">
                   <el-radio slot="reference"
                             v-model="configOption.generateType"
-                            label="json">json</el-radio>
+                            label="json">json
+                  </el-radio>
                 </el-popover>
                 <el-popover placement="top-start"
                             trigger="hover"
                             content="复制string字符串，可直接用于后端保存无需再次处理。">
                   <el-radio slot="reference"
                             v-model="configOption.generateType"
-                            label="string">string</el-radio>
+                            label="string">string
+                  </el-radio>
                 </el-popover>
               </el-form-item>
               <el-form-item label="缩进长度-空格数量">
@@ -258,7 +271,8 @@
                        type="primary"
                        @click="handleCopy"
                        slot="reference"
-                       style="margin-left: 10px;">复制</el-button>
+                       style="margin-left: 10px;">复制
+            </el-button>
           </el-popover>
         </div>
       </el-drawer>
@@ -277,10 +291,12 @@
         <div class="afd-drawer-foot">
           <el-button size="medium"
                      type="primary"
-                     @click="handlePreviewSubmit">确定</el-button>
+                     @click="handlePreviewSubmit">确定
+          </el-button>
           <el-button size="medium"
                      type="danger"
-                     @click="handleBeforeClose">取消</el-button>
+                     @click="handleBeforeClose">取消
+          </el-button>
         </div>
       </el-drawer>
     </el-container>
@@ -289,11 +305,11 @@
 
 <script>
 import fields from './fieldsConfig.js'
-import { validatenull, filterDicProps, filterCommonDicProps } from './utils/index'
-import beautifier from './utils/json-beautifier'
-import MonacoEditor from './utils/monaco-editor'
-import widgetEmpty from './assets/widget-empty.png'
-import history from './mixins/history'
+import {validatenull, filterDicProps, filterCommonDicProps} from '../utils/index'
+import beautifier from '../utils/json-beautifier'
+import MonacoEditor from '../utils/monaco-editor'
+import widgetEmpty from '@assets/widget-empty.png'
+import history from '../mixins/history'
 
 import Draggable from 'vuedraggable'
 
@@ -303,7 +319,7 @@ import WidgetConfig from './WidgetConfig'
 
 export default {
   name: "FormDesign",
-  components: { Draggable, MonacoEditor, WidgetForm, FormConfig, WidgetConfig },
+  components: {Draggable, MonacoEditor, WidgetForm, FormConfig, WidgetConfig},
   mixins: [history],
   props: {
     options: {
@@ -368,11 +384,11 @@ export default {
             options = eval('(' + options + ')')
           } catch (e) {
             console.error('非法配置')
-            options = { column: [] }
+            options = {column: []}
           }
         }
         this.transAvueOptionsToFormDesigner(options).then(res => {
-          this.widgetForm = { ...this.widgetForm, ...res }
+          this.widgetForm = {...this.widgetForm, ...res}
         })
       },
       deep: true
@@ -451,14 +467,14 @@ export default {
           options = eval('(' + options + ')')
         } catch (e) {
           console.error('非法配置')
-          options = { column: [] }
+          options = {column: []}
         }
       }
       if (!options.column) options.column = []
       this.widgetForm = this.initHistory({
         index: 0,
         maxStep: 20,
-        steps: [await this.transAvueOptionsToFormDesigner({ ...this.widgetForm, ...options })],
+        steps: [await this.transAvueOptionsToFormDesigner({...this.widgetForm, ...options})],
         storage: this.storage
       })
 
@@ -503,7 +519,7 @@ export default {
         newIndex = activeIndex
       }
 
-      this.$refs.widgetForm.handleWidgetAdd({ newIndex })
+      this.$refs.widgetForm.handleWidgetAdd({newIndex})
     },
     // 预览 - 弹窗
     handlePreview() {
@@ -787,8 +803,7 @@ export default {
         const option = await this.transformToAvueOptions(this.widgetForm)
         this.parseJson(option)
         return option
-      }
-      else return await this.transformToAvueOptions(this.widgetForm)
+      } else return await this.transformToAvueOptions(this.widgetForm)
     },
     parseJson(jsonObj) {
       // 循环所有键
@@ -807,5 +822,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import './styles/index.scss';
+@import "../styles";
 </style>

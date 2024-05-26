@@ -89,7 +89,7 @@
   </div>
 </template>
 <script>
-import MonacoEditor from '../../utils/monaco-editor'
+import MonacoEditor from '../../../utils/monaco-editor'
 import AfdColumn from './column.vue'
 
 export default {
@@ -161,7 +161,7 @@ export default {
         if (!page) page = { currentPage: 1, pageSize: 10 }
         const { currentPage, pageSize } = page
         let params = { ...data, ${currentPageKey || 'current'}: currentPage, ${pageSizeKey || 'page'}: pageSize }
-        
+
         if (value) params['${value}'] = value
 
         if ('${method || 'get'}' == 'get') params = { params: { ...params } }
