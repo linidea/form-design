@@ -1030,11 +1030,6 @@
   resolved "https://registry.yarnpkg.com/@discoveryjs/json-ext/-/json-ext-0.5.7.tgz#1d572bfbbe14b7704e0ba0f39b74815b84870d70"
   integrity sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==
 
-"@element-plus/icons-vue@^2.0.6":
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@element-plus/icons-vue/-/icons-vue-2.3.1.tgz#1f635ad5fdd5c85ed936481525570e82b5a8307a"
-  integrity sha512-XxVUZv48RZAd87ucGS48jPf6pKu0yV5UCg9f4FFwtrYxXOwWuVJo6wOvSLKEoMQKjv8GsX/mhP6UsC1lRwbUWg==
-
 "@eslint/eslintrc@^0.4.3":
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-0.4.3.tgz#9e42981ef035beb3dd49add17acb96e8ff6f394c"
@@ -1171,14 +1166,15 @@
   resolved "https://registry.yarnpkg.com/@sideway/pinpoint/-/pinpoint-2.0.0.tgz#cff8ffadc372ad29fd3f78277aeb29e632cc70df"
   integrity sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==
 
-"@smallwei/avue@^3.4.2":
-  version "3.4.2"
-  resolved "https://registry.yarnpkg.com/@smallwei/avue/-/avue-3.4.2.tgz#7ca8ffb19fc29141a4bbc05ab249b61b9f20753a"
-  integrity sha512-n9pzS7/r6Kz5suQcPGUWE88mJVx8wb8gR9yaFabiUyiBPnBD6QV2nhclj4hiJGuZjwIgdVO8axD4NxEYYxrqdA==
+"@smallwei/avue@2.12.2":
+  version "2.12.2"
+  resolved "https://registry.yarnpkg.com/@smallwei/avue/-/avue-2.12.2.tgz#ff68ec32aeaa4d58858fba95a29f753a20abcad3"
+  integrity sha512-paMV5sMhlrYfnKArJa+etas2eSK9yQLRnjN+TM7S83c4IVe44SvmV3f5qd7M2MykruJdm5A9XIHlJmRUYmANRQ==
   dependencies:
-    "@element-plus/icons-vue" "^2.0.6"
     countup.js "^1.9.3"
     dayjs "^1.10.4"
+    nprogress "^0.2.0"
+    vue-cropper "^0.5.8"
 
 "@soda/friendly-errors-webpack-plugin@^1.8.0":
   version "1.8.1"
@@ -2948,7 +2944,7 @@ electron-to-chromium@^1.4.668:
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.774.tgz#1017d1758aaeeefe5423aa9d67b4b1e5d1d0a856"
   integrity sha512-132O1XCd7zcTkzS3FgkAzKmnBuNJjK8WjcTtNuoylj7MYbqw5eXehjQ5OK91g0zm7OTKIPeaAG4CPoRfD9M1Mg==
 
-element-ui@^2.15.13, element-ui@^2.15.14:
+element-ui@^2.15.14:
   version "2.15.14"
   resolved "https://registry.yarnpkg.com/element-ui/-/element-ui-2.15.14.tgz#3c34df79467636592812d720d2e6784e7a6ec2ea"
   integrity sha512-2v9fHL0ZGINotOlRIAJD5YuVB8V7WKxrE9Qy7dXhRipa035+kF7WuU/z+tEmLVPBcJ0zt8mOu1DKpWcVzBK8IA==
@@ -4532,6 +4528,11 @@ npm-run-path@^4.0.1:
   dependencies:
     path-key "^3.0.0"
 
+nprogress@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/nprogress/-/nprogress-0.2.0.tgz#cb8f34c53213d895723fcbab907e9422adbcafb1"
+  integrity sha512-I19aIingLgR1fmhftnbWWO3dXc0hSxqHQHQb3H8m+K3TnEn/iSeTZZOyvKXWqQESMwuUVnatlCnZdLBZZt2VSA==
+
 nth-check@^2.0.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/nth-check/-/nth-check-2.1.1.tgz#c9eab428effce36cd6b92c924bdb000ef1f1ed1d"
@@ -6043,6 +6044,11 @@ vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==
+
+vue-cropper@^0.5.8:
+  version "0.5.11"
+  resolved "https://registry.yarnpkg.com/vue-cropper/-/vue-cropper-0.5.11.tgz#2ea05bb5069146dc4c6818edf8de209cbc5b7103"
+  integrity sha512-UeA3qL2BLCTGkOEAxEsxSNFO+qLYAn6YRHv4oS32cP9lMhF1vFmnAf/z+ZamtR0/Fh3sbZeZUCLVR2Ol2/dpTQ==
 
 vue-cropper@^0.6.2:
   version "0.6.5"

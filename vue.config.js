@@ -17,7 +17,7 @@ module.exports = {
     },
 
     chainWebpack: (config) => {
-        console.log('NODE_ENV: ', process.env.NODE_ENV)
+        console.log('当前运行环境 NODE_ENV: ', process.env.NODE_ENV)
         // 生产环境
         if (process.env.NODE_ENV === 'production') {
             // 忽略打包
@@ -34,10 +34,8 @@ module.exports = {
         }
         config.resolve.alias
             .set('@', resolve('src'))
-            .set('@assets', resolve('src/assets'))
-            .set('@components', resolve('src/components'))
-            .set('@utils', resolve('src/utils'))
-            .set('@mixins', resolve('src/mixins'))
+            .set('@util', resolve('src/util'))
+            .set('@mixin', resolve('src/mixin'))
 
         const output = config.output.store.get('path')
         if (output.includes('lib')) config.plugin('optimize')
