@@ -44,7 +44,7 @@
 </template>
 
 <script>
-import MonacoEditor from '@/util/monaco-editor'
+import MonacoEditor from '@/designer/form/util/monaco-editor'
 
 export default {
   name: "config-event",

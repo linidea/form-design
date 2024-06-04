@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App'
 
 // 表单设计器
-import FormDesign from './formDesigner';
+import FormDesign from './designer/form';
 
 // 注册表单设计器
 Vue.use(FormDesign)

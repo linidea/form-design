@@ -16,7 +16,7 @@
   </div>
 </template>
 <script>
-import { filterDicProps } from '../../../util'
+import { filterDicProps } from '../../util'
 
 export default {
   name: 'widget-form-item',

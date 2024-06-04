@@ -1,4 +1,4 @@
-import beautifier from '@/util/json-beautifier'
+import beautifier from '@/designer/form/util/json-beautifier'
 
 export default {
     data() {

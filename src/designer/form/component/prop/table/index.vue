@@ -89,7 +89,7 @@
   </div>
 </template>
 <script>
-import MonacoEditor from '../../../../util/monaco-editor'
+import MonacoEditor from '../../../util/monaco-editor'
 import AfdColumn from './column.vue'
 
 export default {

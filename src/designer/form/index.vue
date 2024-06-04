@@ -290,16 +290,16 @@
 
 <script>
 import fields from './component/config'
-import {validatenull, filterDicProps, filterCommonDicProps} from '../util/index'
-import beautifier from '../util/json-beautifier'
-import MonacoEditor from '../util/monaco-editor'
-import history from '../mixin/history'
+import {validatenull, filterDicProps, filterCommonDicProps} from './util/index'
+import beautifier from './util/json-beautifier'
+import MonacoEditor from './util/monaco-editor'
+import history from './mixin/history'
 
 import Draggable from 'vuedraggable'
 
-import WidgetForm from './form/widget/WidgetForm.vue'
-import FormConfig from './form/prop/form/index.vue'
-import WidgetConfig from './form/prop/base/index.vue'
+import WidgetForm from './home/widget/WidgetForm.vue'
+import FormConfig from './home/prop/form/index.vue'
+import WidgetConfig from './home/prop/base/index.vue'
 
 export default {
   name: "FormDesign",
