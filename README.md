@@ -15,8 +15,9 @@ element-ui 2.15.14
 ## 快速开始
 
 ```sh
-npm install
-npm run serve
+nvm use 16
+yarn install
+yarn serve
 ```
 
 ## 注意事项
