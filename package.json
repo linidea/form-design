@@ -1,5 +1,5 @@
 {
-  "name": "form-design",
+  "name": "lowcode",
   "version": "1.0.0",
   "scripts": {
     "serve": "NODE_ENV=development vue-cli-service serve",

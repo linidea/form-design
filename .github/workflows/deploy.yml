@@ -1,5 +1,5 @@
-# FormDesign
-name: FormDesign
+# lowcode
+name: lowcode
 
 on:
   # using the `master` branch as the default branch.
@@ -38,7 +38,7 @@ jobs:
         uses: actions/configure-pages@v3
       - name: Install dependencies
         run: yarn install # or npm install
-      - name: Build with FormDesign
+      - name: Build with lowcode
         run: |
           yarn build:prod
       - name: Upload artifact
@@ -49,7 +49,7 @@ jobs:
   # Deployment job
   deploy:
     environment:
-      name: FormDesign
+      name: lowcode
       url: ${{ steps.deployment.outputs.page_url }}
     needs: build
     runs-on: ubuntu-latest

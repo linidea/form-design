@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App'
 
-import AvueFormDesign from './designer';
+import AvueFormDesign from './formDesigner';
 import AvueUeditor from 'avue-plugin-ueditor'
 
 Vue.use(window.AVUE)
