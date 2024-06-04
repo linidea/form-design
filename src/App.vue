@@ -15,12 +15,7 @@ export default {
       options: {},
     }
   },
-  methods: {
-    handleSubmit(val) {
-      this.$message.success("查看控制台")
-      console.log(val);
-    },
-  }
+  methods: {}
 }
 </script>
 <style>

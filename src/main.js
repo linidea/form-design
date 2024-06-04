@@ -1,15 +1,12 @@
 import Vue from 'vue'
 import App from './App'
 
-import AvueFormDesign from './formDesigner';
-import AvueUeditor from 'avue-plugin-ueditor'
+// 表单设计器
+import FormDesign from './formDesigner';
 
-Vue.use(window.AVUE)
-Vue.use(AvueFormDesign)
-Vue.use(AvueUeditor)
+// 注册表单设计器
+Vue.use(FormDesign)
 
 Vue.config.productionTip = false
 
-new Vue({
-    render: h => h(App),
-}).$mount('#app')
+new Vue({render: h => h(App)}).$mount('#app')
