@@ -34,8 +34,6 @@ module.exports = {
         }
         config.resolve.alias
             .set('@', resolve('src'))
-            .set('@util', resolve('src/util'))
-            .set('@mixin', resolve('src/mixin'))
 
         const output = config.output.store.get('path')
         if (output.includes('lib')) config.plugin('optimize')
