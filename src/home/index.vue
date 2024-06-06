@@ -10,11 +10,7 @@
   </div>
 </template>
 <script>
-export default {
-  mounted() {
-    console.log(3333);
-  }
-}
+export default {}
 </script>
 <style scoped>
 .header, .container, .main, .aside {
