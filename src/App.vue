@@ -7,15 +7,3 @@
     <router-view></router-view>
   </div>
 </template>
-
-<script>
-export default {
-  mounted() {
-    // this.$router.push('/').catch(err => {
-    //   console.log(err);
-    // });
-  }
-}
-</script>
-<style>
-</style>
