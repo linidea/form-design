@@ -1,10 +1,10 @@
 <template>
   <div class="menus">
     <MyIcon v-for="item in menus"
-            :key="item.name"
-            :name="item.name"
-            :class="['menu',item.name === activeMenu ? 'menu-hover' : '']"
-            @click="handleClickMenu(item.name)"
+            :name="item.icon"
+            :key="item.menu"
+            :class="['menu',item.menu === activeMenu ? 'menu-hover' : '']"
+            @click="handleClickMenu(item.menu)"
     />
   </div>
 </template>
@@ -24,12 +24,8 @@ export default {
       activeMenu: '',
       menus: [
         {
-          name: 'app',
-          path: ''
-        },
-        {
-          name: 'github',
-          path: ''
+          icon: 'app',
+          menu: 'myApp'
         }
       ]
     }
