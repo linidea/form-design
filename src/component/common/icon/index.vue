@@ -1,5 +1,5 @@
 <template>
-  <a :href="href" :target="target">
+  <a :href="href" :target="target" @click="handleClick">
     <img alt="icon" class="icon" :src="Icons[name]['icon']" :style="`width:${size}px;height:${size}px`"/>
   </a>
 </template>
@@ -29,6 +29,11 @@ export default {
   data() {
     return {
       Icons
+    }
+  },
+  methods: {
+    handleClick() {
+      this.$emit('click');
     }
   }
 }
