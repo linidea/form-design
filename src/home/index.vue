@@ -5,17 +5,23 @@
         <Header/>
       </el-header>
       <el-container>
-        <el-aside class="aside" width="60px">Aside</el-aside>
-        <el-main class="main">Main</el-main>
+        <el-aside class="aside" width="60px">
+          <Aside/>
+        </el-aside>
+        <el-main class="main">
+          <Main/>
+        </el-main>
       </el-container>
     </el-container>
   </div>
 </template>
 <script>
 import Header from "@/home/layout/Header.vue";
+import Aside from "@/home/layout/Aside.vue";
+import Main from "@/home/layout/Main.vue";
 
 export default {
-  components: {Header}
+  components: {Header, Aside, Main}
 }
 </script>
 <style scoped>
@@ -34,5 +40,9 @@ export default {
 
 .aside {
   border-right: 1px solid #ddd;
+}
+
+.main {
+  padding: 10px;
 }
 </style>
