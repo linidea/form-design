@@ -3,7 +3,6 @@ function getState(store, moduleName, stateName) {
 }
 
 function setState(store, moduleName, mutationName, value) {
-    debugger
     store.commit(`${moduleName}/${mutationName}`, value);
 }
 

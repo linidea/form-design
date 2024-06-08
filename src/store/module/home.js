@@ -3,7 +3,7 @@ export default {
     // 启用命名空间可以帮助你避免在大型项目中出现命名冲突,使用mutations时需要 `${moduleName}/${mutationName}`
     namespaced: true,
     state: {
-        menu: 'app'
+        menu: 'myApp'
     },
     mutations: {
         // 左侧菜单
