@@ -14,7 +14,8 @@
     "element-ui": "^2.15.14",
     "monaco-editor": "^0.30.1",
     "vue-router": "^3.6.5",
-    "vuedraggable": "^2.24.3"
+    "vuedraggable": "^2.24.3",
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^5.0.8",
