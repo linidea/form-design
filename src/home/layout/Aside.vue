@@ -1,11 +1,18 @@
 <template>
   <div class="menus">
-    <MyIcon v-for="item in menus"
-            :name="item.icon"
-            :key="item.menu"
-            :class="['menu',item.menu === activeMenu ? 'menu-hover' : '']"
-            @click="handleClickMenu(item.menu)"
-    />
+    <el-tooltip
+        :key="`menu_${item.menu}`"
+        v-for="item in menus"
+        placement="right"
+        :content="item.desc"
+    >
+      <MyIcon
+          :name="item.icon"
+          :class="['menu',item.menu === activeMenu ? 'menu-hover' : '']"
+          @click="handleClickMenu(item.menu)"
+      />
+    </el-tooltip>
+
   </div>
 </template>
 
@@ -25,7 +32,8 @@ export default {
       menus: [
         {
           icon: 'app',
-          menu: 'myApp'
+          menu: 'myApp',
+          desc: '我的应用'
         }
       ]
     }
