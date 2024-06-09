@@ -1,6 +1,10 @@
 <template>
   <div class="cards">
-    <div class="card" v-for="card in cards" :key="card.name">
+    <div class="card"
+         :key="card.name"
+         v-for="card in cards"
+         @click="$router.push(card.path)"
+    >
       <div class="card-inner">
         <MyIcon class="card-inner_icon" :name="card.icon" size="30"/>
         <div class="card-inner_title">{{ card.title }}</div>
@@ -31,7 +35,7 @@ export default {
           name: 'tableDesigner',
           title: '表格设计器',
           path: '/designer/table',
-          desc: '基于 ElementUI 的表单设计器,通过可视化操作配置表格属性,最终保存为 JSON 配置项'
+          desc: '基于 ElementUI 的表格设计器,通过可视化操作配置表格属性,最终保存为 JSON 配置项'
         },
       ]
     }
