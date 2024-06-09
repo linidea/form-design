@@ -1,9 +1,11 @@
 <template>
   <div class="cards">
     <div class="card" v-for="card in cards" :key="card.name">
-      <MyIcon :name="card.icon"/>
-      <div>{{ card.title }}</div>
-      <div>{{ card.description }}</div>
+      <div class="card-inner">
+        <MyIcon class="card-inner_icon" :name="card.icon" size="30"/>
+        <div class="card-inner_title">{{ card.title }}</div>
+        <div class="card-inner_desc">{{ card.desc }}</div>
+      </div>
     </div>
   </div>
 </template>
@@ -23,31 +25,13 @@ export default {
           name: 'formDesigner',
           title: '表单设计器',
           path: '/designer/form',
-          description: '基于 ElementUI 的表单设计器,通过可视化操作搭建页面,最终保存为 JSON 配置项'
-        },        {
-          icon: 'form',
-          name: 'formDesigner',
-          title: '表单设计器',
-          path: '/designer/form',
-          description: '基于 ElementUI 的表单设计器,通过可视化操作搭建页面,最终保存为 JSON 配置项'
-        },        {
-          icon: 'form',
-          name: 'formDesigner',
-          title: '表单设计器',
-          path: '/designer/form',
-          description: '基于 ElementUI 的表单设计器,通过可视化操作搭建页面,最终保存为 JSON 配置项'
-        },        {
-          icon: 'form',
-          name: 'formDesigner',
-          title: '表单设计器',
-          path: '/designer/form',
-          description: '基于 ElementUI 的表单设计器,通过可视化操作搭建页面,最终保存为 JSON 配置项'
+          desc: '基于 ElementUI 的表单设计器,通过可视化操作搭建页面,最终保存为 JSON 配置项'
         }, {
-          icon: 'form',
-          name: 'formDesigner',
-          title: '表单设计器',
-          path: '/designer/form',
-          description: '基于 ElementUI 的表单设计器,通过可视化操作搭建页面,最终保存为 JSON 配置项'
+          icon: 'table',
+          name: 'tableDesigner',
+          title: '表格设计器',
+          path: '/designer/table',
+          desc: '基于 ElementUI 的表单设计器,通过可视化操作配置表格属性,最终保存为 JSON 配置项'
         },
       ]
     }
@@ -58,17 +42,44 @@ export default {
 <style scoped>
 .cards {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .card {
-  width: 30%;
-  height: 200px;
+  width: 33.33%;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.card-inner {
+  height: 25vh;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border: 1px solid #eee;
+  cursor: pointer;
+  background: #f9f9f9;
+  border-radius: 16px;
+}
+
+.card-inner:hover {
+  background: #f0f0f0;
+  border: 1px solid #4fa4fa;
+}
+
+.card-inner_icon {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+}
+
+.card-inner_title {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card-inner_desc {
+  margin-top: 10px;
 }
 </style>
