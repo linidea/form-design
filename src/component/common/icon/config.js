@@ -1,7 +1,7 @@
-import App from "./img/app.png";
-import Github from './img/github.png'
-import Form from './img/form.png'
-import Table from './img/table.png'
+import App from "./img/app.svg";
+import Github from './img/github.svg'
+import Form from './img/form.svg'
+import Table from './img/table.svg'
 
 export default {
     app: {
