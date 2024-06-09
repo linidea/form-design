@@ -1,15 +1,16 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router'
-import HomeRoutes from '@/router/route/home';
+import BaseRoutes from '@/router/route/base';
+import DesignerRoutes from '@/router/route/designer';
 
 Vue.use(VueRouter);
 
 const routes = [
-    ...HomeRoutes
+    ...BaseRoutes,
+    ...DesignerRoutes
 ]
 
 const router = new VueRouter({
-    mode: 'history', // 使用 HTML5 history 模式
     routes
 })
 
