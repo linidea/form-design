@@ -3,6 +3,7 @@ import Github from './img/github.svg'
 import Form from './img/form.svg'
 import Table from './img/table.svg'
 import Flow from './img/flow.svg'
+import ChartPie from './img/chart-pie.svg'
 
 export default {
     app: {
@@ -20,4 +21,7 @@ export default {
     flow: {
         icon: Flow,
     },
+    chart: {
+        icon: ChartPie,
+    }
 }

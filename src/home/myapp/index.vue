@@ -29,19 +29,25 @@ export default {
           name: 'formDesigner',
           title: '表单设计器',
           path: '/designer/form',
-          desc: '基于 ElementUI 的表单设计器,通过可视化操作搭建表单页面'
+          desc: '基于 ElementUI 的表单设计器'
         }, {
           icon: 'table',
           name: 'tableDesigner',
           title: '表格设计器',
           path: '/designer/table',
-          desc: '基于 ElementUI 的表格设计器,通过可视化操作配置表格属性'
+          desc: '基于 ElementUI 的表格设计器'
         }, {
           icon: 'flow',
           name: 'flowDesigner',
           title: '流程设计器',
           path: '/designer/flow',
-          desc: '基于 bpmn.js 的流程设计器'
+          desc: '基于 Bpmn 的流程设计器'
+        }, {
+          icon: 'chart',
+          name: 'chartDesigner',
+          title: '图表设计器',
+          path: '/designer/chart',
+          desc: '基于 ECharts 的图表设计器'
         },
       ]
     }
@@ -83,13 +89,14 @@ export default {
 }
 
 .card-inner_title {
-  text-align: center;
   margin-top: 10px;
   font-size: 16px;
   font-weight: bold;
+  text-align: center;
 }
 
 .card-inner_desc {
   margin-top: 10px;
+  text-align: center;
 }
 </style>
