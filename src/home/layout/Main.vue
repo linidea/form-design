@@ -4,11 +4,11 @@
 <script>
 import {getState} from "@/util/common/vuexHelper";
 //
-import MyApp from '@/home/myapp'
+import Designer from '../designer'
 
 export default {
   components: {
-    MyApp
+    Designer
   },
   computed: {
     activeMenu() {
@@ -18,8 +18,8 @@ export default {
   data() {
     return {
       cards: {
-        myApp: {
-          component: 'MyApp'
+        designer: {
+          component: 'Designer'
         }
       }
     }

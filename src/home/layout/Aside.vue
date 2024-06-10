@@ -31,9 +31,9 @@ export default {
       activeMenu: '',
       menus: [
         {
-          icon: 'app',
-          menu: 'myApp',
-          desc: '我的应用'
+          icon: 'pencilRuler',
+          menu: 'designer',
+          desc: '设计器'
         }
       ]
     }
